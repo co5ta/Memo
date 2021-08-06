@@ -27,7 +27,7 @@
 		2267755426BB3F2300DA7C2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2267755626BB3F2500DA7C2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2267755926BB3F2500DA7C2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2267755B26BB3F2500DA7C2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2267755B26BB3F2500DA7C2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Memo/SupportingFiles/Info.plist; sourceTree = SOURCE_ROOT; };
 		2267756226BB42A600DA7C2C /* MemoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryItem.swift; sourceTree = "<group>"; };
 		2267756426BB439000DA7C2C /* MemoryItems.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MemoryItems.json; sourceTree = "<group>"; };
 		226D3D1126BC8FBC00E3E7C4 /* MemoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryViewController.swift; sourceTree = "<group>"; };
@@ -64,27 +64,67 @@
 		2267754C26BB3F2300DA7C2C /* Memo */ = {
 			isa = PBXGroup;
 			children = (
-				2267756126BB428000DA7C2C /* Model */,
-				2267754D26BB3F2300DA7C2C /* AppDelegate.swift */,
-				2267754F26BB3F2300DA7C2C /* SceneDelegate.swift */,
-				2267755326BB3F2300DA7C2C /* Main.storyboard */,
-				226D3D1326BC900900E3E7C4 /* Memory.storyboard */,
-				2267755126BB3F2300DA7C2C /* MainViewController.swift */,
-				226D3D1126BC8FBC00E3E7C4 /* MemoryViewController.swift */,
-				2267755626BB3F2500DA7C2C /* Assets.xcassets */,
-				2267755826BB3F2500DA7C2C /* LaunchScreen.storyboard */,
-				2267756426BB439000DA7C2C /* MemoryItems.json */,
-				2267755B26BB3F2500DA7C2C /* Info.plist */,
+				2267756126BB428000DA7C2C /* Models */,
+				226D3D1526BD9CAB00E3E7C4 /* ViewModel */,
+				226D3D1626BD9CD400E3E7C4 /* ViewControllers */,
+				226D3D1726BD9CFA00E3E7C4 /* Storyboards */,
+				226D3D1826BD9E0400E3E7C4 /* SupportingFiles */,
+				226D3D1926BD9E3D00E3E7C4 /* Resources */,
 			);
 			path = Memo;
 			sourceTree = "<group>";
 		};
-		2267756126BB428000DA7C2C /* Model */ = {
+		2267756126BB428000DA7C2C /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				2267756226BB42A600DA7C2C /* MemoryItem.swift */,
 			);
-			path = Model;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		226D3D1526BD9CAB00E3E7C4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		226D3D1626BD9CD400E3E7C4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2267755126BB3F2300DA7C2C /* MainViewController.swift */,
+				226D3D1126BC8FBC00E3E7C4 /* MemoryViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		226D3D1726BD9CFA00E3E7C4 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				2267755826BB3F2500DA7C2C /* LaunchScreen.storyboard */,
+				2267755326BB3F2300DA7C2C /* Main.storyboard */,
+				226D3D1326BC900900E3E7C4 /* Memory.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		226D3D1826BD9E0400E3E7C4 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				2267754D26BB3F2300DA7C2C /* AppDelegate.swift */,
+				2267754F26BB3F2300DA7C2C /* SceneDelegate.swift */,
+				2267755626BB3F2500DA7C2C /* Assets.xcassets */,
+				2267755B26BB3F2500DA7C2C /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		226D3D1926BD9E3D00E3E7C4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2267756426BB439000DA7C2C /* MemoryItems.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,7 +280,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -295,7 +335,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -312,7 +352,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PQ32JTG8M8;
-				INFOPLIST_FILE = Memo/Info.plist;
+				INFOPLIST_FILE = Memo/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -331,7 +371,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PQ32JTG8M8;
-				INFOPLIST_FILE = Memo/Info.plist;
+				INFOPLIST_FILE = Memo/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
