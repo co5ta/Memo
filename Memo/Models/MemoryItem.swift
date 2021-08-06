@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MemoryItem: Codable {
+struct MemoryItem: Item {
     var title: String
     var text: String
 }

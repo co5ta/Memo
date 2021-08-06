@@ -17,6 +17,12 @@
 		2267756526BB439000DA7C2C /* MemoryItems.json in Resources */ = {isa = PBXBuildFile; fileRef = 2267756426BB439000DA7C2C /* MemoryItems.json */; };
 		226D3D1226BC8FBC00E3E7C4 /* MemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226D3D1126BC8FBC00E3E7C4 /* MemoryViewController.swift */; };
 		226D3D1426BC900900E3E7C4 /* Memory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 226D3D1326BC900900E3E7C4 /* Memory.storyboard */; };
+		226D3D1B26BDA14000E3E7C4 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226D3D1A26BDA14000E3E7C4 /* MainViewModel.swift */; };
+		226D3D1E26BDA40D00E3E7C4 /* ServiceStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226D3D1D26BDA40D00E3E7C4 /* ServiceStorage.swift */; };
+		226D3D2026BDA4DF00E3E7C4 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226D3D1F26BDA4DF00E3E7C4 /* Item.swift */; };
+		226D3D2326BDA70A00E3E7C4 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226D3D2226BDA70A00E3E7C4 /* Storage.swift */; };
+		226D3D2626BDADBF00E3E7C4 /* JSONStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226D3D2526BDADBF00E3E7C4 /* JSONStorage.swift */; };
+		226D3D2826BDE7DE00E3E7C4 /* MemoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226D3D2726BDE7DE00E3E7C4 /* MemoryViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +38,12 @@
 		2267756426BB439000DA7C2C /* MemoryItems.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MemoryItems.json; sourceTree = "<group>"; };
 		226D3D1126BC8FBC00E3E7C4 /* MemoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryViewController.swift; sourceTree = "<group>"; };
 		226D3D1326BC900900E3E7C4 /* Memory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Memory.storyboard; sourceTree = "<group>"; };
+		226D3D1A26BDA14000E3E7C4 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		226D3D1D26BDA40D00E3E7C4 /* ServiceStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceStorage.swift; sourceTree = "<group>"; };
+		226D3D1F26BDA4DF00E3E7C4 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		226D3D2226BDA70A00E3E7C4 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		226D3D2526BDADBF00E3E7C4 /* JSONStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONStorage.swift; sourceTree = "<group>"; };
+		226D3D2726BDE7DE00E3E7C4 /* MemoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +76,10 @@
 		2267754C26BB3F2300DA7C2C /* Memo */ = {
 			isa = PBXGroup;
 			children = (
+				226D3D1C26BDA34000E3E7C4 /* Protocols */,
+				226D3D2126BDA5B800E3E7C4 /* Services */,
 				2267756126BB428000DA7C2C /* Models */,
-				226D3D1526BD9CAB00E3E7C4 /* ViewModel */,
+				226D3D1526BD9CAB00E3E7C4 /* ViewModels */,
 				226D3D1626BD9CD400E3E7C4 /* ViewControllers */,
 				226D3D1726BD9CFA00E3E7C4 /* Storyboards */,
 				226D3D1826BD9E0400E3E7C4 /* SupportingFiles */,
@@ -82,11 +96,13 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		226D3D1526BD9CAB00E3E7C4 /* ViewModel */ = {
+		226D3D1526BD9CAB00E3E7C4 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				226D3D1A26BDA14000E3E7C4 /* MainViewModel.swift */,
+				226D3D2726BDE7DE00E3E7C4 /* MemoryViewModel.swift */,
 			);
-			path = ViewModel;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		226D3D1626BD9CD400E3E7C4 /* ViewControllers */ = {
@@ -125,6 +141,32 @@
 				2267756426BB439000DA7C2C /* MemoryItems.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		226D3D1C26BDA34000E3E7C4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				226D3D1D26BDA40D00E3E7C4 /* ServiceStorage.swift */,
+				226D3D1F26BDA4DF00E3E7C4 /* Item.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		226D3D2126BDA5B800E3E7C4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				226D3D2426BDACFE00E3E7C4 /* Storage */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		226D3D2426BDACFE00E3E7C4 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				226D3D2226BDA70A00E3E7C4 /* Storage.swift */,
+				226D3D2526BDADBF00E3E7C4 /* JSONStorage.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,7 +245,13 @@
 				2267754E26BB3F2300DA7C2C /* AppDelegate.swift in Sources */,
 				2267755026BB3F2300DA7C2C /* SceneDelegate.swift in Sources */,
 				2267756326BB42A600DA7C2C /* MemoryItem.swift in Sources */,
+				226D3D2026BDA4DF00E3E7C4 /* Item.swift in Sources */,
 				226D3D1226BC8FBC00E3E7C4 /* MemoryViewController.swift in Sources */,
+				226D3D1B26BDA14000E3E7C4 /* MainViewModel.swift in Sources */,
+				226D3D2326BDA70A00E3E7C4 /* Storage.swift in Sources */,
+				226D3D2826BDE7DE00E3E7C4 /* MemoryViewModel.swift in Sources */,
+				226D3D1E26BDA40D00E3E7C4 /* ServiceStorage.swift in Sources */,
+				226D3D2626BDADBF00E3E7C4 /* JSONStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
