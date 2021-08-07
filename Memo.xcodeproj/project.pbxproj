@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		225F163026BE869C0092FECC /* MemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225F162F26BE869C0092FECC /* MemoTests.swift */; };
 		2267754E26BB3F2300DA7C2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2267754D26BB3F2300DA7C2C /* AppDelegate.swift */; };
 		2267755026BB3F2300DA7C2C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2267754F26BB3F2300DA7C2C /* SceneDelegate.swift */; };
 		2267755226BB3F2300DA7C2C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2267755126BB3F2300DA7C2C /* MainViewController.swift */; };
@@ -25,7 +26,20 @@
 		226D3D2826BDE7DE00E3E7C4 /* MemoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226D3D2726BDE7DE00E3E7C4 /* MemoryViewModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		225F163226BE869C0092FECC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2267754226BB3F2300DA7C2C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2267754926BB3F2300DA7C2C;
+			remoteInfo = Memo;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		225F162D26BE869C0092FECC /* MemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		225F162F26BE869C0092FECC /* MemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoTests.swift; sourceTree = "<group>"; };
+		225F163126BE869C0092FECC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2267754A26BB3F2300DA7C2C /* Memo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2267754D26BB3F2300DA7C2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2267754F26BB3F2300DA7C2C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +61,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		225F162A26BE869C0092FECC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2267754726BB3F2300DA7C2C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -57,10 +78,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		225F162E26BE869C0092FECC /* MemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				225F162F26BE869C0092FECC /* MemoTests.swift */,
+				225F163126BE869C0092FECC /* Info.plist */,
+			);
+			path = MemoTests;
+			sourceTree = "<group>";
+		};
 		2267754126BB3F2300DA7C2C = {
 			isa = PBXGroup;
 			children = (
 				2267754C26BB3F2300DA7C2C /* Memo */,
+				225F162E26BE869C0092FECC /* MemoTests */,
 				2267754B26BB3F2300DA7C2C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				2267754A26BB3F2300DA7C2C /* Memo.app */,
+				225F162D26BE869C0092FECC /* MemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -172,6 +204,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		225F162C26BE869C0092FECC /* MemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 225F163626BE869C0092FECC /* Build configuration list for PBXNativeTarget "MemoTests" */;
+			buildPhases = (
+				225F162926BE869C0092FECC /* Sources */,
+				225F162A26BE869C0092FECC /* Frameworks */,
+				225F162B26BE869C0092FECC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				225F163326BE869C0092FECC /* PBXTargetDependency */,
+			);
+			name = MemoTests;
+			productName = MemoTests;
+			productReference = 225F162D26BE869C0092FECC /* MemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		2267754926BB3F2300DA7C2C /* Memo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2267755E26BB3F2500DA7C2C /* Build configuration list for PBXNativeTarget "Memo" */;
@@ -198,6 +248,10 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					225F162C26BE869C0092FECC = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 2267754926BB3F2300DA7C2C;
+					};
 					2267754926BB3F2300DA7C2C = {
 						CreatedOnToolsVersion = 12.5;
 					};
@@ -217,11 +271,19 @@
 			projectRoot = "";
 			targets = (
 				2267754926BB3F2300DA7C2C /* Memo */,
+				225F162C26BE869C0092FECC /* MemoTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		225F162B26BE869C0092FECC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2267754826BB3F2300DA7C2C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -237,6 +299,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		225F162926BE869C0092FECC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				225F163026BE869C0092FECC /* MemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2267754626BB3F2300DA7C2C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -256,6 +326,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		225F163326BE869C0092FECC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2267754926BB3F2300DA7C2C /* Memo */;
+			targetProxy = 225F163226BE869C0092FECC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2267755326BB3F2300DA7C2C /* Main.storyboard */ = {
@@ -277,6 +355,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		225F163426BE869C0092FECC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PQ32JTG8M8;
+				INFOPLIST_FILE = MemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.co5ta.MemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Memo.app/Memo";
+			};
+			name = Debug;
+		};
+		225F163526BE869C0092FECC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PQ32JTG8M8;
+				INFOPLIST_FILE = MemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.co5ta.MemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Memo.app/Memo";
+			};
+			name = Release;
+		};
 		2267755C26BB3F2500DA7C2C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -434,6 +554,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		225F163626BE869C0092FECC /* Build configuration list for PBXNativeTarget "MemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				225F163426BE869C0092FECC /* Debug */,
+				225F163526BE869C0092FECC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2267754526BB3F2300DA7C2C /* Build configuration list for PBXProject "Memo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
