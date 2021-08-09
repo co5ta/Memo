@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, develop ]
+
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  build-and-test:
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Check macOS version
+      run: sw_vers
+      
+    - name: Check Xcode versions
+      run: /usr/bin/xcodebuild -version
+
+#    - name: Select Xcode
+#      run: sudo xcode-select -switch /Applications/Xcode_12.5.app
+
+    - name: Build and Test
+      run: xcodebuild clean build test -project Memo.xcodeproj -scheme Memo -destination "platform=iOS Simulator,name=iPhone 12"

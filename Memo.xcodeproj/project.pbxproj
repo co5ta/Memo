@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		225F163026BE869C0092FECC /* MemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225F162F26BE869C0092FECC /* MemoTests.swift */; };
 		2267754E26BB3F2300DA7C2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2267754D26BB3F2300DA7C2C /* AppDelegate.swift */; };
 		2267755026BB3F2300DA7C2C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2267754F26BB3F2300DA7C2C /* SceneDelegate.swift */; };
 		2267755226BB3F2300DA7C2C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2267755126BB3F2300DA7C2C /* MainViewController.swift */; };
@@ -17,9 +18,28 @@
 		2267756526BB439000DA7C2C /* MemoryItems.json in Resources */ = {isa = PBXBuildFile; fileRef = 2267756426BB439000DA7C2C /* MemoryItems.json */; };
 		226D3D1226BC8FBC00E3E7C4 /* MemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226D3D1126BC8FBC00E3E7C4 /* MemoryViewController.swift */; };
 		226D3D1426BC900900E3E7C4 /* Memory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 226D3D1326BC900900E3E7C4 /* Memory.storyboard */; };
+		226D3D1B26BDA14000E3E7C4 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226D3D1A26BDA14000E3E7C4 /* MainViewModel.swift */; };
+		226D3D1E26BDA40D00E3E7C4 /* ServiceStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226D3D1D26BDA40D00E3E7C4 /* ServiceStorage.swift */; };
+		226D3D2026BDA4DF00E3E7C4 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226D3D1F26BDA4DF00E3E7C4 /* Item.swift */; };
+		226D3D2326BDA70A00E3E7C4 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226D3D2226BDA70A00E3E7C4 /* Storage.swift */; };
+		226D3D2626BDADBF00E3E7C4 /* JSONStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226D3D2526BDADBF00E3E7C4 /* JSONStorage.swift */; };
+		226D3D2826BDE7DE00E3E7C4 /* MemoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226D3D2726BDE7DE00E3E7C4 /* MemoryViewModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		225F163226BE869C0092FECC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2267754226BB3F2300DA7C2C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2267754926BB3F2300DA7C2C;
+			remoteInfo = Memo;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		225F162D26BE869C0092FECC /* MemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		225F162F26BE869C0092FECC /* MemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoTests.swift; sourceTree = "<group>"; };
+		225F163126BE869C0092FECC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2267754A26BB3F2300DA7C2C /* Memo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2267754D26BB3F2300DA7C2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2267754F26BB3F2300DA7C2C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,14 +47,27 @@
 		2267755426BB3F2300DA7C2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2267755626BB3F2500DA7C2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2267755926BB3F2500DA7C2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2267755B26BB3F2500DA7C2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2267755B26BB3F2500DA7C2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Memo/SupportingFiles/Info.plist; sourceTree = SOURCE_ROOT; };
 		2267756226BB42A600DA7C2C /* MemoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryItem.swift; sourceTree = "<group>"; };
 		2267756426BB439000DA7C2C /* MemoryItems.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MemoryItems.json; sourceTree = "<group>"; };
 		226D3D1126BC8FBC00E3E7C4 /* MemoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryViewController.swift; sourceTree = "<group>"; };
 		226D3D1326BC900900E3E7C4 /* Memory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Memory.storyboard; sourceTree = "<group>"; };
+		226D3D1A26BDA14000E3E7C4 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		226D3D1D26BDA40D00E3E7C4 /* ServiceStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceStorage.swift; sourceTree = "<group>"; };
+		226D3D1F26BDA4DF00E3E7C4 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		226D3D2226BDA70A00E3E7C4 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		226D3D2526BDADBF00E3E7C4 /* JSONStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONStorage.swift; sourceTree = "<group>"; };
+		226D3D2726BDE7DE00E3E7C4 /* MemoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		225F162A26BE869C0092FECC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2267754726BB3F2300DA7C2C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -45,10 +78,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		225F162E26BE869C0092FECC /* MemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				225F162F26BE869C0092FECC /* MemoTests.swift */,
+				225F163126BE869C0092FECC /* Info.plist */,
+			);
+			path = MemoTests;
+			sourceTree = "<group>";
+		};
 		2267754126BB3F2300DA7C2C = {
 			isa = PBXGroup;
 			children = (
 				2267754C26BB3F2300DA7C2C /* Memo */,
+				225F162E26BE869C0092FECC /* MemoTests */,
 				2267754B26BB3F2300DA7C2C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				2267754A26BB3F2300DA7C2C /* Memo.app */,
+				225F162D26BE869C0092FECC /* MemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,32 +108,120 @@
 		2267754C26BB3F2300DA7C2C /* Memo */ = {
 			isa = PBXGroup;
 			children = (
-				2267756126BB428000DA7C2C /* Model */,
-				2267754D26BB3F2300DA7C2C /* AppDelegate.swift */,
-				2267754F26BB3F2300DA7C2C /* SceneDelegate.swift */,
-				2267755326BB3F2300DA7C2C /* Main.storyboard */,
-				226D3D1326BC900900E3E7C4 /* Memory.storyboard */,
-				2267755126BB3F2300DA7C2C /* MainViewController.swift */,
-				226D3D1126BC8FBC00E3E7C4 /* MemoryViewController.swift */,
-				2267755626BB3F2500DA7C2C /* Assets.xcassets */,
-				2267755826BB3F2500DA7C2C /* LaunchScreen.storyboard */,
-				2267756426BB439000DA7C2C /* MemoryItems.json */,
-				2267755B26BB3F2500DA7C2C /* Info.plist */,
+				226D3D1C26BDA34000E3E7C4 /* Protocols */,
+				226D3D2126BDA5B800E3E7C4 /* Services */,
+				2267756126BB428000DA7C2C /* Models */,
+				226D3D1526BD9CAB00E3E7C4 /* ViewModels */,
+				226D3D1626BD9CD400E3E7C4 /* ViewControllers */,
+				226D3D1726BD9CFA00E3E7C4 /* Storyboards */,
+				226D3D1826BD9E0400E3E7C4 /* SupportingFiles */,
+				226D3D1926BD9E3D00E3E7C4 /* Resources */,
 			);
 			path = Memo;
 			sourceTree = "<group>";
 		};
-		2267756126BB428000DA7C2C /* Model */ = {
+		2267756126BB428000DA7C2C /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				2267756226BB42A600DA7C2C /* MemoryItem.swift */,
 			);
-			path = Model;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		226D3D1526BD9CAB00E3E7C4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				226D3D1A26BDA14000E3E7C4 /* MainViewModel.swift */,
+				226D3D2726BDE7DE00E3E7C4 /* MemoryViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		226D3D1626BD9CD400E3E7C4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2267755126BB3F2300DA7C2C /* MainViewController.swift */,
+				226D3D1126BC8FBC00E3E7C4 /* MemoryViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		226D3D1726BD9CFA00E3E7C4 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				2267755826BB3F2500DA7C2C /* LaunchScreen.storyboard */,
+				2267755326BB3F2300DA7C2C /* Main.storyboard */,
+				226D3D1326BC900900E3E7C4 /* Memory.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		226D3D1826BD9E0400E3E7C4 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				2267754D26BB3F2300DA7C2C /* AppDelegate.swift */,
+				2267754F26BB3F2300DA7C2C /* SceneDelegate.swift */,
+				2267755626BB3F2500DA7C2C /* Assets.xcassets */,
+				2267755B26BB3F2500DA7C2C /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		226D3D1926BD9E3D00E3E7C4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2267756426BB439000DA7C2C /* MemoryItems.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		226D3D1C26BDA34000E3E7C4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				226D3D1D26BDA40D00E3E7C4 /* ServiceStorage.swift */,
+				226D3D1F26BDA4DF00E3E7C4 /* Item.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		226D3D2126BDA5B800E3E7C4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				226D3D2426BDACFE00E3E7C4 /* Storage */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		226D3D2426BDACFE00E3E7C4 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				226D3D2226BDA70A00E3E7C4 /* Storage.swift */,
+				226D3D2526BDADBF00E3E7C4 /* JSONStorage.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		225F162C26BE869C0092FECC /* MemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 225F163626BE869C0092FECC /* Build configuration list for PBXNativeTarget "MemoTests" */;
+			buildPhases = (
+				225F162926BE869C0092FECC /* Sources */,
+				225F162A26BE869C0092FECC /* Frameworks */,
+				225F162B26BE869C0092FECC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				225F163326BE869C0092FECC /* PBXTargetDependency */,
+			);
+			name = MemoTests;
+			productName = MemoTests;
+			productReference = 225F162D26BE869C0092FECC /* MemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		2267754926BB3F2300DA7C2C /* Memo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2267755E26BB3F2500DA7C2C /* Build configuration list for PBXNativeTarget "Memo" */;
@@ -116,6 +248,10 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					225F162C26BE869C0092FECC = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 2267754926BB3F2300DA7C2C;
+					};
 					2267754926BB3F2300DA7C2C = {
 						CreatedOnToolsVersion = 12.5;
 					};
@@ -135,11 +271,19 @@
 			projectRoot = "";
 			targets = (
 				2267754926BB3F2300DA7C2C /* Memo */,
+				225F162C26BE869C0092FECC /* MemoTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		225F162B26BE869C0092FECC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2267754826BB3F2300DA7C2C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -155,6 +299,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		225F162926BE869C0092FECC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				225F163026BE869C0092FECC /* MemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2267754626BB3F2300DA7C2C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -163,11 +315,25 @@
 				2267754E26BB3F2300DA7C2C /* AppDelegate.swift in Sources */,
 				2267755026BB3F2300DA7C2C /* SceneDelegate.swift in Sources */,
 				2267756326BB42A600DA7C2C /* MemoryItem.swift in Sources */,
+				226D3D2026BDA4DF00E3E7C4 /* Item.swift in Sources */,
 				226D3D1226BC8FBC00E3E7C4 /* MemoryViewController.swift in Sources */,
+				226D3D1B26BDA14000E3E7C4 /* MainViewModel.swift in Sources */,
+				226D3D2326BDA70A00E3E7C4 /* Storage.swift in Sources */,
+				226D3D2826BDE7DE00E3E7C4 /* MemoryViewModel.swift in Sources */,
+				226D3D1E26BDA40D00E3E7C4 /* ServiceStorage.swift in Sources */,
+				226D3D2626BDADBF00E3E7C4 /* JSONStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		225F163326BE869C0092FECC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2267754926BB3F2300DA7C2C /* Memo */;
+			targetProxy = 225F163226BE869C0092FECC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2267755326BB3F2300DA7C2C /* Main.storyboard */ = {
@@ -189,6 +355,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		225F163426BE869C0092FECC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PQ32JTG8M8;
+				INFOPLIST_FILE = MemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.co5ta.MemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Memo.app/Memo";
+			};
+			name = Debug;
+		};
+		225F163526BE869C0092FECC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PQ32JTG8M8;
+				INFOPLIST_FILE = MemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.co5ta.MemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Memo.app/Memo";
+			};
+			name = Release;
+		};
 		2267755C26BB3F2500DA7C2C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -240,7 +448,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -295,7 +503,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -312,7 +520,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PQ32JTG8M8;
-				INFOPLIST_FILE = Memo/Info.plist;
+				INFOPLIST_FILE = Memo/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -331,7 +539,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PQ32JTG8M8;
-				INFOPLIST_FILE = Memo/Info.plist;
+				INFOPLIST_FILE = Memo/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -346,6 +554,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		225F163626BE869C0092FECC /* Build configuration list for PBXNativeTarget "MemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				225F163426BE869C0092FECC /* Debug */,
+				225F163526BE869C0092FECC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2267754526BB3F2300DA7C2C /* Build configuration list for PBXProject "Memo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
