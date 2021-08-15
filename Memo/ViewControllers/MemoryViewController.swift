@@ -6,11 +6,12 @@
 //
 
 import UIKit
+import Combine
 
 final class MemoryViewController: UIViewController {
 
     var viewModel: MemoryViewModel!
-    var blankCounter = 0
+    private var cancellables: Set<AnyCancellable> = []
     
     @IBOutlet weak var textView: UITextView!
     
@@ -29,39 +30,30 @@ final class MemoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         assert(viewModel != nil, "You must provide an item before trying to show this view controller")
-        showText()
+        
+        viewModel.$blankCounter
+            .receive(on: RunLoop.main)
+            .sink { [weak self] counter in
+                self?.showText()
+            }
+            .store(in: &cancellables)
         
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(wordsTapped))
         textView.addGestureRecognizer(tapRecognizer)
     }
     
-    private func showText() {
-        let words = viewModel.item.text.components(separatedBy: " ")
-        let space = NSAttributedString(string: " ", attributes: visibleText)
-        let output = NSMutableAttributedString()
-        
-        for (index, word) in words.enumerated() {
-            if index < blankCounter {
-                output.append(NSMutableAttributedString(string: "\(word)", attributes: visibleText))
-            } else {
-                var strippedWord = word
-                var punctuation: String?
-                if let char = word.last, ",;".contains(char) {
-                    punctuation = String(strippedWord.removeLast())
-                }
-                output.append(NSMutableAttributedString(string: "\(strippedWord)", attributes: invisibleText))
-                if let punctuation = punctuation {
-                    output.append(NSMutableAttributedString(string: "\(punctuation)", attributes: visibleText))
-                }
-            }
-            output.append(space)
-        }
-        textView.attributedText = output
-    }
-    
     @objc
     private func wordsTapped() {
-        blankCounter += 1
-        showText()
+        viewModel.blankCounter += 1
+    }
+    
+    private func showText() {
+        let output = NSMutableAttributedString()
+        for word in viewModel.getWords() {
+            let attributedText = NSMutableAttributedString(string: word.value, attributes: word.isVisible ? visibleText : invisibleText)
+            output.append(attributedText)
+            
+        }
+        textView.attributedText = output
     }
 }
