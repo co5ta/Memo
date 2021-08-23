@@ -23,7 +23,7 @@ class MemoTests: XCTestCase {
         let viewModel = MainViewModel()
         XCTAssertEqual(viewModel.items.count, 8) 
     }
-    
+  
     func testItemTextBlanking() {
         let items = Storage.shared.loadItems()
         let viewModel = MemoryViewModel(item: items[0])

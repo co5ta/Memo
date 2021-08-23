@@ -52,7 +52,6 @@ final class MemoryViewController: UIViewController {
         for word in viewModel.getWords() {
             let attributedText = NSMutableAttributedString(string: word.value, attributes: word.isVisible ? visibleText : invisibleText)
             output.append(attributedText)
-            
         }
         textView.attributedText = output
     }
